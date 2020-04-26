@@ -9,12 +9,33 @@ namespace snake
     {
         static void Main(string[] args)
         {
-            Point point1 = new Point(1,3,'*');
-            point1.Draw();
+            List<char> chList = new List<char>();
+            chList.Add('~');
+            chList.Add('!');
+            chList.Add('@');
+            chList.Add('#');
+            chList.Add('$');
+            chList.Add('%');
+            chList.Add('^');
+            chList.Add('&');
+            chList.Add('*');
+            chList.Add('(');
+            chList.Add(')');
+            chList.Add('_');
+            chList.Add('+');
 
+            
+            List<Point> point = new List<Point>();
+            point.Add(new Point(1, 2, chList[1]));
+            point.Add(new Point(3, 4, chList[2]));
+            point.Add(new Point(5, 6, chList[3]));
+            point.Add(new Point(7, 8, chList[4]));
 
-            Point point2 = new Point(4,5,'#');
-            point2.Draw();
+            foreach (Point i in point)
+            {
+                i.Draw();
+            }
+            
 
             Console.ReadLine();
         }
