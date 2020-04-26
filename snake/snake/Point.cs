@@ -7,9 +7,20 @@ namespace snake
 {
     class Point
     {
-        public int x;
-        public int y;
-        public char sym;
+        private int x;
+        private int y;
+        private char sym;
+
+        public Point()
+        {
+        }
+
+        public Point(int _x, int _y, char _sym)
+        {
+            this.x = _x;
+            this.y = _y;
+            this.sym = _sym;
+        }
 
         public void Draw()
         {
