@@ -15,6 +15,13 @@ namespace snake
         {
         }
 
+        public Point(Point p)
+        {
+            this.x = p.x;
+            this.y = p.y;
+            this.sym = p.sym;
+        }
+        
         public Point(int _x, int _y, char _sym)
         {
             this.x = _x;
@@ -26,6 +33,37 @@ namespace snake
         {
             Console.SetCursorPosition(x, y);
             Console.Write(sym);
+        }
+
+        public void Move(int offset, Direction direct)
+        {
+            if (direct==Direction.RIGHT)
+            {
+                this.x += offset;
+
+            }
+
+            if (direct == Direction.LEFT)
+            {
+                this.x -= offset;
+
+            }
+
+            if (direct == Direction.UP)
+            {
+                this.y += offset;
+
+            }
+            if (direct == Direction.DOWN)
+            {
+                this.y -= offset;
+
+            }
+        }
+
+        public override string ToString()
+        {
+            return x + "," + y + "," +sym;
         }
     }
 }

@@ -12,19 +12,19 @@ namespace snake
             Console.SetBufferSize(80, 25);
 
             List<char> chList = new List<char>();
-            chList.Add('~');
-            chList.Add('!');
-            chList.Add('@');
-            chList.Add('#');
-            chList.Add('$');
-            chList.Add('%');
-            chList.Add('^');
-            chList.Add('&');
-            chList.Add('*');
-            chList.Add('(');
-            chList.Add(')');
-            chList.Add('_');
-            chList.Add('+');
+            chList.Add('~');    //0
+            chList.Add('!');    //1
+            chList.Add('@');    //2
+            chList.Add('#');    //3
+            chList.Add('$');    //4
+            chList.Add('%');    //5
+            chList.Add('^');    //6
+            chList.Add('&');    //7
+            chList.Add('*');    //8
+            chList.Add('(');    //9
+            chList.Add(')');    //10
+            chList.Add('_');    //11
+            chList.Add('+');    //12
 
 
             
@@ -38,6 +38,10 @@ namespace snake
             vertical1.DrawPoint();
             horizont2.DrawPoint();
             vertical2.DrawPoint();
+
+            Point p = new Point(4, 5, chList[8]);
+            snake SnakeMov = new snake(p, 4, Direction.UP);
+            SnakeMov.DrawPoint();
 
             Console.ReadLine();
         }
