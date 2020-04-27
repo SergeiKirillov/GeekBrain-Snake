@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 
 namespace snake
 {
@@ -18,16 +19,19 @@ namespace snake
             chList.Add('#');    //3
             chList.Add('$');    //4
             chList.Add('%');    //5
-            chList.Add('^');    //6
-            chList.Add('&');    //7
-            chList.Add('*');    //8
-            chList.Add('(');    //9
-            chList.Add(')');    //10
-            chList.Add('_');    //11
-            chList.Add('+');    //12
+            chList.Add('&');    //6
+            chList.Add('*');    //7
+            chList.Add('(');    //8
+            chList.Add(')');    //9
+            chList.Add('_');    //10
+            chList.Add('+');    //11
+
+            chList.Add('^');    //12
+            chList.Add('>');    //13
+            chList.Add('<');    //14
 
 
-            
+
             Horizont horizont1 = new Horizont(1, 79, 1, chList[12]);
             Vertical vertical1 = new Vertical(78, 1, 24, chList[12]);
             Horizont horizont2 = new Horizont(1, 79, 24, chList[12]);
@@ -39,9 +43,41 @@ namespace snake
             horizont2.DrawPoint();
             vertical2.DrawPoint();
 
-            Point p = new Point(4, 5, chList[8]);
-            snake SnakeMov = new snake(p, 4, Direction.UP);
+            Point p = new Point(4, 5, chList[3]);
+            snake SnakeMov = new snake(p, 4, Direction.RIGHT);
+
             SnakeMov.DrawPoint();
+            SnakeMov.Move();
+
+            Thread.Sleep(300);
+            SnakeMov.Move();
+
+            Thread.Sleep(300);
+            SnakeMov.Move();
+
+            Thread.Sleep(300);
+            SnakeMov.Move();
+
+            Thread.Sleep(300);
+            SnakeMov.Move();
+
+            Thread.Sleep(300);
+            SnakeMov.Move();
+
+            Thread.Sleep(300);
+            SnakeMov.Move();
+
+            Thread.Sleep(300);
+            SnakeMov.Move();
+
+            Thread.Sleep(300);
+            SnakeMov.Move();
+
+            Thread.Sleep(300);
+            SnakeMov.Move();
+
+            Thread.Sleep(300);
+            SnakeMov.Move();
 
             Console.ReadLine();
         }

@@ -29,6 +29,8 @@ namespace snake
             this.sym = _sym;
         }
 
+        
+
         public void Draw()
         {
             Console.SetCursorPosition(x, y);
@@ -59,6 +61,12 @@ namespace snake
                 this.y -= offset;
 
             }
+        }
+
+        internal void Clear()
+        {
+            sym = ' ';
+            Draw();
         }
 
         public override string ToString()
