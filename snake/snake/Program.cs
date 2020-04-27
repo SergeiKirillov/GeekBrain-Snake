@@ -9,6 +9,8 @@ namespace snake
     {
         static void Main(string[] args)
         {
+            Console.SetBufferSize(80, 25);
+
             List<char> chList = new List<char>();
             chList.Add('~');
             chList.Add('!');
@@ -25,23 +27,17 @@ namespace snake
             chList.Add('+');
 
 
-            //List<Point> point = new List<Point>();
-            //point.Add(new Point(1, 2, chList[1]));
-            //point.Add(new Point(3, 4, chList[2]));
-            //point.Add(new Point(5, 6, chList[3]));
-            //point.Add(new Point(7, 8, chList[4]));
+            
+            Horizont horizont1 = new Horizont(1, 79, 1, chList[12]);
+            Vertical vertical1 = new Vertical(78, 1, 24, chList[12]);
+            Horizont horizont2 = new Horizont(1, 79, 24, chList[12]);
+            Vertical vertical2 = new Vertical(1, 1, 24, chList[12]);
 
-            //foreach (Point i in point)
-            //{
-            //    i.Draw();
-            //}
 
-            Horizont horizont = new Horizont(1, 40, 5, chList[8]);
-            horizont.HorDraw();
-
-            Vertical vertical = new Vertical(39, 6, 20, chList[8]);
-            vertical.VerDraw();
-
+            horizont1.DrawPoint();
+            vertical1.DrawPoint();
+            horizont2.DrawPoint();
+            vertical2.DrawPoint();
 
             Console.ReadLine();
         }

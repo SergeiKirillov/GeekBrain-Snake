@@ -5,25 +5,18 @@ using System.Text;
 
 namespace snake
 {
-    class Horizont
+    class Horizont:figure
     {
-        List<Point> plist = new List<Point>();
+        
 
         public Horizont(int xStart, int xStop, int y, char sym)
         {
             for (int i = xStart; i < xStop; i++)
             {
-                Point point = new Point(i, y, sym);
-                plist.Add(point);
+                Point Xpoint = new Point(i, y, sym);
+                point.Add(Xpoint);
             }
         }
 
-        public void HorDraw()
-        {
-            foreach (Point item in plist)
-            {
-                item.Draw();
-            }
-        }
     }
 }
