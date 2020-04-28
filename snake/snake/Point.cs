@@ -9,7 +9,7 @@ namespace snake
     {
         private int x;
         private int y;
-        private char sym;
+        public char sym;
 
         public Point()
         {
@@ -72,6 +72,11 @@ namespace snake
         public override string ToString()
         {
             return x + "," + y + "," +sym;
+        }
+
+        public bool isHit(Point p)
+        {
+            return p.x == this.x && p.y == this.y;
         }
     }
 }
