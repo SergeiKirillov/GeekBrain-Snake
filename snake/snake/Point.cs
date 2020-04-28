@@ -53,12 +53,12 @@ namespace snake
 
             if (direct == Direction.UP)
             {
-                this.y += offset;
+                this.y -= offset;
 
             }
             if (direct == Direction.DOWN)
             {
-                this.y -= offset;
+                this.y += offset;
 
             }
         }

@@ -45,41 +45,26 @@ namespace snake
 
             Point p = new Point(4, 5, chList[3]);
             snake SnakeMov = new snake(p, 4, Direction.RIGHT);
-
             SnakeMov.DrawPoint();
-            SnakeMov.Move();
 
-            Thread.Sleep(300);
-            SnakeMov.Move();
+           
 
-            Thread.Sleep(300);
-            SnakeMov.Move();
+            while (true)
+            {
+                if (Console.KeyAvailable)
+                {
+                    ConsoleKeyInfo key = Console.ReadKey();
+                    SnakeMov.HandKey(key.Key);
+                }
 
-            Thread.Sleep(300);
-            SnakeMov.Move();
+                Thread.Sleep(100);
 
-            Thread.Sleep(300);
-            SnakeMov.Move();
+                SnakeMov.Move();
 
-            Thread.Sleep(300);
-            SnakeMov.Move();
+            }
+            
 
-            Thread.Sleep(300);
-            SnakeMov.Move();
-
-            Thread.Sleep(300);
-            SnakeMov.Move();
-
-            Thread.Sleep(300);
-            SnakeMov.Move();
-
-            Thread.Sleep(300);
-            SnakeMov.Move();
-
-            Thread.Sleep(300);
-            SnakeMov.Move();
-
-            Console.ReadLine();
+            
         }
         
     }
