@@ -10,7 +10,7 @@ namespace snake
     {
         static void Main(string[] args)
         {
-            Console.SetBufferSize(80, 25);
+            Console.SetBufferSize(140, 45);
 
             List<char> chList = new List<char>();
             chList.Add('~');    //0
